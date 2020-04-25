@@ -1,0 +1,33 @@
+{
+    "name": "frengky/saml2-sp",
+    "description": "Laravel package for a SAML2 SSO service provider (SP)",
+    "keywords": ["php","laravel","saml","saml2","sso","adfs"],
+    "license": "MIT",
+    "homepage": "https://github.com/frengky/saml2-sp",
+    "require": {
+        "onelogin/php-saml": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Frengky\\Saml2\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Frengky",
+            "email": "frengky.lim@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+              "Frengky\\Saml2\\Saml2AuthServiceProvider"
+            ],
+            "aliases": {
+                "Saml2Auth": "Frengky\\Saml2\\Facades\\Saml2Auth"
+            }
+        }
+    }
+}
